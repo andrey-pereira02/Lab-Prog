@@ -3,7 +3,7 @@
 #define TAM 100
 
 int ordenacaoSelecao(int *,int ,int);
-int odernaçaoBolha(int *,int ,int);
+int odernacaoBolha(int *,int ,int);
 
 int main(){
     int usuario;
@@ -18,7 +18,7 @@ int main(){
     }
 
     ordenacaoSelecao(vetor,aux,TAM);
-    //ordenaçãoBolha(vetor,aux,TAM);
+    ordenacaoBolha(vetor,aux,TAM);
 
     return 0;
 }
@@ -36,4 +36,34 @@ int ordenacaoSelecao(int *v,int ajuda,int tamanho){
         printf("O v[%d] = %d\n",(i + 1),v[i]);
     }
     return *v;
+}
+
+int ordenacaoBolha(int *ve,int aju,int tamanho){
+    int flag = 1;
+    int cont = 0;
+    int temp;
+
+    for(int k=0;k<TAM;k++){
+        flag = 1;
+
+        for(int j=0;j<TAM - 1;j++){
+            if(ve[j]> ve[j + 1]){
+                temp = ve[j];
+                ve[j] = ve[j + 1];
+                ve[j + 1] = temp;
+                
+                flag = 0;
+            }
+        }
+        if(flag)
+         break;
+        
+        cont++;
+    }
+    printf("Vetor ordenado: ");
+    for (int i = 0; i < TAM; i++)
+        printf("%d ", ve[i]);
+
+    printf("\nNumero de passadas: %d\n", cont);
+
 }
