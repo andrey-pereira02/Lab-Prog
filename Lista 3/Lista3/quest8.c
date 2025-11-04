@@ -43,10 +43,10 @@ int ordenacaoBolha(int *ve,int aju,int tamanho){
     int cont = 0;
     int temp;
 
-    for(int k=0;k<TAM;k++){
+    for(int k=0;k<TAM - 1;k++){
         flag = 1;
 
-        for(int j=0;j<TAM - 1;j++){
+        for(int j=0;j<TAM -  k - 1;j++){
             if(ve[j]> ve[j + 1]){
                 temp = ve[j];
                 ve[j] = ve[j + 1];
