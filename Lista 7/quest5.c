@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     puts("Digite a nota da prova: ");
     scanf("%d",&ds.pr.nota);
 
-    printf("A nota é %d \n",ds.pr.nota);
+    printf("A nota é %d \n\n",ds.pr.nota);
     
     return 0;
 }
